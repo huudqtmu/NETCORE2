@@ -42,8 +42,10 @@ pipeline {
 	stage ('Publish') {
 		steps {
 			echo 'public 2 runnig folder'
-		//iisreset /stop // stop iis de ghi de file 
+			bat 'iisreset /stop'
 			bat 'xcopy "%WORKSPACE%\\publish" /E /Y /I /R "c:\\wwwroot\\netcore2"'
+			bat 'iisreset /start'
+
  		}
 	}
 
