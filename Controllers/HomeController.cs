@@ -17,7 +17,11 @@ namespace NETCORE2.Controllers
         {
             return View();
         }
-
+        public IActionResult sanpham()
+        {
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();
